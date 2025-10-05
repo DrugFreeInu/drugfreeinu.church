@@ -2,25 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DFI Church Sign</title>
+  <title>DFI Church</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(to bottom, #87CEEB 70%, #4CAF50 70%);
+      height: 350px;
+      background: #87CEEB;
       position: relative;
     }
-  </style>
-</head>
-<body>
 
-  <!-- Sign with Post -->
-  <div style="position: absolute; top: 200px; left: 140px;">
-    <!-- Post -->
-    <div style="width: 20px; height: 100px; background: #8B5A2B; margin: 0 auto;"></div>
+    .grass-band {
+      position: absolute;
+      bottom: 0;
+      height: 100px;
+      width: 100%;
+      background: #4CAF50;
+    }
 
-    <!-- Sign board -->
-    <div style="
+    .grass-blades {
+      position: absolute;
+      bottom: 100px;
+      left: 20px;
+    }
+
+    .grass-blades div {
+      width: 2px;
+      background: green;
+      position: absolute;
+    }
+
+    .g1 { height: 20px; left: 0px; transform: rotate(-10deg); }
+    .g2 { height: 18px; left: 10px; transform: rotate(5deg); }
+    .g3 { height: 22px; left: 25px; transform: rotate(-7deg); }
+    .g4 { height: 16px; left: 40px; transform: rotate(12deg); }
+    .g5 { height: 19px; left: 55px; transform: rotate(-4deg); }
+
+    .sign-wrapper {
+      position: absolute;
+      bottom: 100px;
+      left: 140px;
+    }
+
+    .post {
+      width: 20px;
+      height: 100px;
+      background: #8B5A2B;
+      margin: 0 auto;
+    }
+
+    .sign {
       width: 200px;
       height: 60px;
       background: #deb887;
@@ -38,20 +68,30 @@
       color: #4b2e10;
       font-weight: bold;
       text-shadow: 1px 1px #ffffff55;
-    ">
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Grass -->
+  <div class="grass-band"></div>
+
+  <!-- Grass blades -->
+  <div class="grass-blades">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+  </div>
+
+  <!-- Sign -->
+  <div class="sign-wrapper">
+    <div class="post"></div>
+    <div class="sign">
       <div>DFI Church</div>
       <div style="margin-top: 4px;">established 2025</div>
     </div>
-  </div>
-
-  <!-- Grass Blades -->
-  <div style="position: absolute; top: 290px; left: 0; width: 100%;">
-    <div style="width: 2px; height: 20px; background: green; position: absolute; left: 20px; transform: rotate(-10deg);"></div>
-    <div style="width: 2px; height: 18px; background: green; position: absolute; left: 30px; transform: rotate(5deg);"></div>
-    <div style="width: 2px; height: 22px; background: green; position: absolute; left: 45px; transform: rotate(-7deg);"></div>
-    <div style="width: 2px; height: 16px; background: green; position: absolute; left: 60px; transform: rotate(12deg);"></div>
-    <div style="width: 2px; height: 19px; background: green; position: absolute; left: 75px; transform: rotate(-4deg);"></div>
-    <div style="width: 2px; height: 20px; background: green; position: absolute; left: 90px; transform: rotate(3deg);"></div>
   </div>
 
 </body>
