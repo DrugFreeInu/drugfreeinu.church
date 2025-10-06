@@ -7,64 +7,43 @@
     body {
       margin: 0;
       background: white;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       height: 100vh;
-      position: relative;
     }
 
     .scene {
-      position: absolute;
-      top: 25%;
-      left: 0;
       width: 100%;
+      max-width: 600px;
       height: 350px;
       background: linear-gradient(to bottom, #87CEEB 70%, #4CAF50 70%);
-      overflow: hidden;
+      position: relative;
     }
 
-    .grass-blades {
+    .sign-wrapper {
       position: absolute;
-      top: 245px;
-      left: 0;
-      width: 100%;
-    }
-
-    .grass-blades div {
-      width: 2px;
-      height: 20px;
-      background: green;
-      position: absolute;
-    }
-
-    .grass-blades div:nth-child(1) { left: 20px; transform: rotate(-10deg); }
-    .grass-blades div:nth-child(2) { left: 30px; transform: rotate(5deg); }
-    .grass-blades div:nth-child(3) { left: 45px; transform: rotate(-7deg); }
-    .grass-blades div:nth-child(4) { left: 60px; transform: rotate(12deg); }
-    .grass-blades div:nth-child(5) { left: 75px; transform: rotate(-4deg); }
-    .grass-blades div:nth-child(6) { left: 90px; transform: rotate(3deg); }
-
-    .sign-container {
-      position: absolute;
-      top: 130px;
+      top: 170px;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    .sign-post {
+    .post {
       width: 20px;
       height: 100px;
       background: #8B5A2B;
       margin: 0 auto;
     }
 
-    .sign-board {
+    .sign {
       width: 200px;
       height: 60px;
       background: #deb887;
       border: 4px solid #8B5A2B;
-      position: absolute;
-      top: 0;
-      left: 50%;
       transform: translate(-50%, -80%) rotate(-2deg);
+      position: absolute;
+      left: 50%;
+      top: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -75,24 +54,47 @@
       font-weight: bold;
       text-shadow: 1px 1px #ffffff55;
     }
+
+    .grass {
+      position: absolute;
+      top: 240px;
+      left: 0;
+      width: 100%;
+    }
+
+    .grass div {
+      width: 2px;
+      height: 20px;
+      background: green;
+      position: absolute;
+    }
+
+    .g1 { left: 20px; transform: rotate(-10deg); }
+    .g2 { left: 30px; transform: rotate(5deg); }
+    .g3 { left: 45px; transform: rotate(-7deg); }
+    .g4 { left: 60px; transform: rotate(12deg); }
+    .g5 { left: 75px; transform: rotate(-4deg); }
+    .g6 { left: 90px; transform: rotate(3deg); }
   </style>
 </head>
 <body>
-
   <div class="scene">
-    <div class="grass-blades">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-
-    <div class="sign-container">
-      <div class="sign-post"></div>
-      <div class="sign-board">
+    <div class="sign-wrapper">
+      <div class="post"></div>
+      <div class="sign">
         <div>DFI Church</div>
         <div style="margin-top: 4px;">established 2025</div>
       </div>
     </div>
-  </div>
 
+    <div class="grass">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="g6"></div>
+    </div>
+  </div>
 </body>
 </html>
