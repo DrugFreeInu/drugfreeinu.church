@@ -37,7 +37,12 @@
     <iframe src="dirt.html"  style="z-index: 1;"></iframe>
     <iframe src="grass.html" style="z-index: 2;"></iframe>
     <iframe src="sign.html"  style="z-index: 3;"></iframe>
-    <iframe src="shovel.html?v=2"  style="z-index: 4;"></iframe>
+    <iframe id="shovelFrame" style="z-index: 4;"></iframe>
+<script>
+const frame = document.getElementById('shovelFrame');
+// adds a timestamp automatically, so every load is a fresh version
+frame.src = `shovel.html?v=${Date.now()}`;
+</script>
   </div>
 </body>
 </html>
