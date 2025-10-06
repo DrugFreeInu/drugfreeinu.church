@@ -2,79 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DFI Church</title>
+  <title>DFI Church Sign</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background: #87CEEB;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .scene {
+      background: #87CEEB;
       position: relative;
-      width: 100%;
-      height: 200px;
+      overflow: hidden;
     }
 
-    .ground {
+    /* Grass base */
+    .grass {
       position: absolute;
-      top: 100px;
+      bottom: 0;
       width: 100%;
-      height: 100px;
+      height: 150px;
       background: #4CAF50;
     }
 
-    .sign {
+    /* Grass blades */
+    .grass-blades div {
+      width: 2px;
+      height: 20px;
+      background: green;
       position: absolute;
-      top: 55px;
-      left: 50px;
-      width: 120px;
-      height: 50px;
+      bottom: 150px;
+    }
+    .grass-blades div:nth-child(1) { left: 20%; transform: rotate(-10deg); }
+    .grass-blades div:nth-child(2) { left: 25%; transform: rotate(5deg); }
+    .grass-blades div:nth-child(3) { left: 30%; transform: rotate(-7deg); }
+    .grass-blades div:nth-child(4) { left: 35%; transform: rotate(10deg); }
+    .grass-blades div:nth-child(5) { left: 40%; transform: rotate(-4deg); }
+
+    /* Sign post */
+    .sign-container {
+      position: absolute;
+      bottom: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .post {
+      width: 20px;
+      height: 100px;
+      background: #8B5A2B;
+    }
+
+    .sign {
+      width: 200px;
+      height: 60px;
       background: #deb887;
-      border: 2px solid #654321;
-      transform: rotate(-2deg);
+      border: 4px solid #8B5A2B;
+      transform: translateY(-80%) rotate(-2deg);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       font-family: serif;
-      font-size: 12px;
-    }
-
-    .sign::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 10px;
-      height: 20px;
-      background: #654321;
-    }
-
-    .grass-blades {
-      position: absolute;
-      top: 100px;
-      left: 20px;
-      font-size: 18px;
-      font-family: monospace;
-      color: green;
-      line-height: 1;
+      font-size: 16px;
+      color: #4b2e10;
+      font-weight: bold;
+      text-shadow: 1px 1px #ffffff55;
     }
   </style>
 </head>
 <body>
-  <div class="scene">
+
+  <div class="grass"></div>
+
+  <div class="grass-blades">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="sign-container">
+    <div class="post"></div>
     <div class="sign">
       <div>DFI Church</div>
-      <div>established 2025</div>
+      <div style="margin-top: 4px;">established 2025</div>
     </div>
-    <div class="grass-blades">\\ \ | / //</div>
-    <div class="ground"></div>
   </div>
+
 </body>
 </html>
