@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DFI Church</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       background: white;
       display: flex;
       justify-content: center;
-      padding-top: 40px;
     }
 
     .scene {
+      position: relative;
       width: 100%;
       max-width: 400px;
-      aspect-ratio: 3 / 2;
-      position: relative;
-      background: linear-gradient(to bottom, #87ceeb 60%, #4CAF50 60%, #4CAF50 80%, #5C2E00 80%);
+      height: auto;
       overflow: hidden;
+      background: #87CEEB; /* sky */
     }
 
-    /* Signpost */
+    .grass {
+      background: #3DAA40;
+      height: 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dirt {
+      background: #5A2D0C;
+      height: 60px;
+    }
+
     .sign-post {
       position: absolute;
-      bottom: 40%;
+      bottom: 90px; /* lowered from horizon */
       left: 50%;
       transform: translateX(-50%);
       width: 10px;
       height: 50px;
-      background-color: #5C2E00;
+      background: #6B3E1D;
       z-index: 2;
     }
 
-    /* Sign board */
-    .sign {
+    .sign-board {
       position: absolute;
-      bottom: calc(40% + 45px);
+      bottom: 135px; /* slightly above the post */
       left: 50%;
       transform: translateX(-50%) rotate(-2deg);
-      background-color: tan;
-      border: 2px solid #5C2E00;
-      padding: 8px 16px;
+      background: tan;
+      border: 2px solid #4B2E15;
+      padding: 10px 20px;
       font-family: serif;
-      font-weight: bold;
+      font-size: 16px;
       text-align: center;
       z-index: 3;
     }
 
-    /* Grass blades */
     .grass-blade {
       position: absolute;
-      bottom: 27%;
+      bottom: 60px;
       width: 2px;
       height: 20px;
-      background: #145214;
-      transform-origin: bottom center;
+      background: #1c3c14;
+      transform-origin: bottom;
     }
 
-    .grass1 { left: 10%; transform: rotate(-10deg); }
-    .grass2 { left: 13%; transform: rotate(5deg); }
-    .grass3 { left: 16%; transform: rotate(-4deg); }
-    .grass4 { left: 19%; transform: rotate(7deg); }
-    .grass5 { left: 22%; transform: rotate(-6deg); }
+    .blade1 { left: 20px; transform: rotate(-10deg); }
+    .blade2 { left: 28px; transform: rotate(8deg); }
+    .blade3 { left: 36px; transform: rotate(-6deg); }
+    .blade4 { left: 44px; transform: rotate(10deg); }
+    .blade5 { left: 52px; transform: rotate(-12deg); }
   </style>
 </head>
 <body>
   <div class="scene">
     <div class="sign-post"></div>
-    <div class="sign">DFI Church<br>established 2025</div>
-    <div class="grass-blade grass1"></div>
-    <div class="grass-blade grass2"></div>
-    <div class="grass-blade grass3"></div>
-    <div class="grass-blade grass4"></div>
-    <div class="grass-blade grass5"></div>
+    <div class="sign-board">DFI Church<br>established 2025</div>
+    <div class="grass">
+      <div class="grass-blade blade1"></div>
+      <div class="grass-blade blade2"></div>
+      <div class="grass-blade blade3"></div>
+      <div class="grass-blade blade4"></div>
+      <div class="grass-blade blade5"></div>
+    </div>
+    <div class="dirt"></div>
   </div>
 </body>
 </html>
