@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DFI Church</title>
-<style>
-  html, body {
-    margin: 0;
-    background: white;
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-    height: 100%;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DFI Church</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
 
-  .scene {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 3 / 2;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ccc;
-  }
+    .scene {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 3 / 2;
+      position: relative;
+      overflow: hidden;
+    }
 
-  /* every layer fills the same space */
-  iframe {
-    border: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  /* explicit stacking order */
-  .sky-layer   { z-index: 0; }
-  .grass-layer { z-index: 1; }
-  .sign-layer  { z-index: 2; }
-  .dirt-layer  { z-index: 3; }
-</style>
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
 </head>
 <body>
   <div class="scene">
-    <iframe class="sky-layer"   src="sky.html"></iframe>
-    <iframe class="grass-layer" src="grass.html"></iframe>
-    <iframe class="sign-layer"  src="sign.html"></iframe>
-    <iframe class="dirt-layer"  src="dirt.html"></iframe>
+    <iframe src="sky.html"></iframe>
+    <iframe src="grass.html"></iframe>
+    <iframe src="sign.html"></iframe>
+    <iframe src="dirt.html"></iframe>
   </div>
 </body>
 </html>
