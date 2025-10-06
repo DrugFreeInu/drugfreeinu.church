@@ -2,52 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DFI Church</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: #87ceeb;
+      background: #87CEEB;
       height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
     .scene {
       position: relative;
       width: 100%;
       height: 200px;
-      background: #87ceeb;
     }
 
     .ground {
       position: absolute;
-      bottom: 0;
+      top: 100px;
       width: 100%;
-      height: 60px;
+      height: 100px;
       background: #4CAF50;
     }
 
-    .sign-post {
+    .sign {
       position: absolute;
+      top: 55px;
       left: 50px;
-      bottom: 60px;
       width: 120px;
-      height: 60px;
+      height: 50px;
       background: #deb887;
       border: 2px solid #654321;
       transform: rotate(-2deg);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       font-family: serif;
       font-size: 12px;
     }
 
-    .sign-post::after {
+    .sign::after {
       content: '';
       position: absolute;
       bottom: -20px;
@@ -58,24 +56,24 @@
       background: #654321;
     }
 
-    .grass {
+    .grass-blades {
       position: absolute;
+      top: 100px;
       left: 20px;
-      bottom: 60px;
       font-size: 18px;
-      line-height: 1;
-      color: green;
       font-family: monospace;
+      color: green;
+      line-height: 1;
     }
   </style>
 </head>
 <body>
   <div class="scene">
-    <div class="sign-post">
+    <div class="sign">
       <div>DFI Church</div>
       <div>established 2025</div>
     </div>
-    <div class="grass">\\ \ | / //</div>
+    <div class="grass-blades">\\ \ | / //</div>
     <div class="ground"></div>
   </div>
 </body>
