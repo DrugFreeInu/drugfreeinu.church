@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DFI Church</title>
   <style>
     body {
@@ -10,77 +11,84 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 60px;
     }
 
     .scene {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       background: #87CEEB;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
+    /* grass */
     .grass {
-      background: #4CAF50;
+      width: 100%;
       height: 60px;
+      background: #4CAF50;
       position: relative;
     }
 
+    /* dirt */
     .dirt {
-      background: #8B4513;
+      width: 100%;
       height: 40px;
+      background: #6B3E26;
     }
 
-    .sign {
+    /* grass blades */
+    .blade {
       position: absolute;
-      left: 120px;
-      top: -40px;
-      width: 100px;
-      height: 60px;
-      background: #DEB887;
-      border: 2px solid #8B4513;
+      bottom: 5px;
+      width: 2px;
+      height: 15px;
+      background: #104910;
+    }
+
+    .blade:nth-child(1) { left: 10px; }
+    .blade:nth-child(2) { left: 20px; height: 12px; }
+    .blade:nth-child(3) { left: 30px; height: 14px; }
+    .blade:nth-child(4) { left: 40px; height: 11px; }
+    .blade:nth-child(5) { left: 50px; height: 13px; }
+
+    /* sign post */
+    .sign {
+      position: relative;
+      top: -50px;
+      width: 140px;
+      height: 50px;
+      background: #E0C097;
+      border: 2px solid #704214;
       transform: rotate(-3deg);
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 10px;
+      font-family: serif;
+      font-size: 12px;
       text-align: center;
     }
 
     .post {
-      position: absolute;
-      left: 165px;
-      top: 20px;
       width: 10px;
       height: 40px;
-      background: #8B4513;
-    }
-
-    .blades {
-      position: absolute;
-      left: 30px;
-      bottom: 5px;
-      display: flex;
-      gap: 4px;
-    }
-
-    .blade {
-      width: 2px;
-      height: 12px;
-      background: #1E5631;
+      background: #704214;
+      position: relative;
+      top: -10px;
     }
   </style>
 </head>
 <body>
   <div class="scene">
+    <div class="sign">DFI Church<br>established 2025</div>
+    <div class="post"></div>
     <div class="grass">
-      <div class="sign">DFI Church<br>established 2025</div>
-      <div class="post"></div>
-      <div class="blades">
-        <div class="blade"></div>
-        <div class="blade"></div>
-        <div class="blade"></div>
-        <div class="blade"></div>
-        <div class="blade"></div>
-      </div>
+      <div class="blade"></div>
+      <div class="blade"></div>
+      <div class="blade"></div>
+      <div class="blade"></div>
+      <div class="blade"></div>
     </div>
     <div class="dirt"></div>
   </div>
